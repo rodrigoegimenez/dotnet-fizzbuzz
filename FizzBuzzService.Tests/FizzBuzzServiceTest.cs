@@ -21,6 +21,7 @@ public class FizzBuzzServiceTest
 
     [Theory]
     [InlineData(3)]
+    [InlineData(6)]
     public void ReturnsFizzFor3(int value)
     {
         // Arrange
