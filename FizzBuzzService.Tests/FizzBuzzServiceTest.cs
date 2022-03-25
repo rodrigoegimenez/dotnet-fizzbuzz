@@ -26,4 +26,15 @@ public class FizzBuzzServiceTest
         // Assert
         Assert.Equal("2", result);
     }
+
+    [Fact]
+    public void Returns4For4()
+    {
+        // Arrange
+        var fizzBuzzService = new FizzBuzzService();
+        // Act
+        var result = fizzBuzzService.Of(4);
+        // Assert
+        Assert.Equal("4", result);
+    }
 }
