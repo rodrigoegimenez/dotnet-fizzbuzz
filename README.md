@@ -10,3 +10,7 @@ cd fizzbuzz
 ```bash
 dotnet new xunit -o FizzBuzzService.Tests
 ```
+
+```bash
+dotnet sln add FizzBuzzService.Tests/FizzBuzzService.Tests.csproj
+```
