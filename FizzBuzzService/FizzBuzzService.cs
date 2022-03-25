@@ -3,7 +3,7 @@ public class FizzBuzzService
 {
     public string Of(int number)
     {
-        if (number == 3 || number == 6 || number == 9)
+        if (number % 3 == 0)
         {
             return "Fizz";
         }
