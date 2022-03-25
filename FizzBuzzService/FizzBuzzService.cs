@@ -5,5 +5,4 @@ public class FizzBuzzService
     {
         return number.ToString();
     }
-
 }

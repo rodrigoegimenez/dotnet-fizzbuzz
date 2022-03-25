@@ -5,36 +5,18 @@ namespace FizzBuzz.Service.Tests;
 
 public class FizzBuzzServiceTest
 {
-    [Fact]
-    public void Returns1For1()
+    [Theory]
+    [InlineData(1)]
+    [InlineData(2)]
+    [InlineData(4)]
+    public void ReturnsNumberForNotMultipleOf3Or5(int value)
     {
         // Arrange
         var fizzBuzzService = new FizzBuzzService();
         // Act
-        var result = fizzBuzzService.Of(1);
+        var result = fizzBuzzService.Of(value);
         // Assert
-        Assert.Equal("1", result);
+        Assert.Equal(value.ToString(), result);
     }
 
-    [Fact]
-    public void Returns2For2()
-    {
-        // Arrange
-        var fizzBuzzService = new FizzBuzzService();
-        // Act
-        var result = fizzBuzzService.Of(2);
-        // Assert
-        Assert.Equal("2", result);
-    }
-
-    [Fact]
-    public void Returns4For4()
-    {
-        // Arrange
-        var fizzBuzzService = new FizzBuzzService();
-        // Act
-        var result = fizzBuzzService.Of(4);
-        // Assert
-        Assert.Equal("4", result);
-    }
 }
