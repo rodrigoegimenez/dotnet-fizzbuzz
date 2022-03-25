@@ -19,4 +19,16 @@ public class FizzBuzzServiceTest
         Assert.Equal(value.ToString(), result);
     }
 
+    [Theory]
+    [InlineData(3)]
+    public void ReturnsFizzFor3(int value)
+    {
+        // Arrange
+        var fizzBuzzService = new FizzBuzzService();
+        // Act
+        var result = fizzBuzzService.Of(value);
+        // Assert
+        Assert.Equal("Fizz", result);
+    }
+
 }
