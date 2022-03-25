@@ -15,4 +15,15 @@ public class FizzBuzzServiceTest
         // Assert
         Assert.Equal("1", result);
     }
+
+    [Fact]
+    public void Returns2For2()
+    {
+        // Arrange
+        var fizzBuzzService = new FizzBuzzService();
+        // Act
+        var result = fizzBuzzService.Of(2);
+        // Assert
+        Assert.Equal("2", result);
+    }
 }
