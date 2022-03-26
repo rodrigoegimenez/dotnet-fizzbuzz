@@ -36,6 +36,7 @@ public class FizzBuzzServiceTest
     [Theory]
     [InlineData(5)]
     [InlineData(10)]
+    [InlineData(20)]
     public void ReturnsBuzzFor5And10(int value)
     {
         // Arrange
