@@ -37,7 +37,7 @@ public class FizzBuzzServiceTest
     [InlineData(5)]
     [InlineData(10)]
     [InlineData(20)]
-    public void ReturnsBuzzFor5And10(int value)
+    public void ReturnsBuzzFor5And10And20(int value)
     {
         // Arrange
         var fizzBuzzService = new FizzBuzzService();
