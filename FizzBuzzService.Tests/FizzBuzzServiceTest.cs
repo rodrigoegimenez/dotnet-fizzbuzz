@@ -37,7 +37,7 @@ public class FizzBuzzServiceTest
     [InlineData(5)]
     [InlineData(10)]
     [InlineData(20)]
-    public void ReturnsBuzzFor5And10And20(int value)
+    public void ReturnsBuzzMultipleOf5(int value)
     {
         // Arrange
         var fizzBuzzService = new FizzBuzzService();
@@ -45,5 +45,18 @@ public class FizzBuzzServiceTest
         var result = fizzBuzzService.Of(value);
         // Assert
         Assert.Equal("Buzz", result);
+    }
+
+
+    [Theory]
+    [InlineData(15)]
+    public void ReturnsFizzBuzzFor15(int value)
+    {
+        // Arrange
+        var fizzBuzzService = new FizzBuzzService();
+        // Act
+        var result = fizzBuzzService.Of(value);
+        // Assert
+        Assert.Equal("FizzBuzz", result);
     }
 }
