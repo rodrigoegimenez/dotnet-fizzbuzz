@@ -3,18 +3,22 @@ public class FizzBuzzService
 {
     public string Of(int number)
     {
-        if (number % 15 == 0)
+        if (IsFizz(number) && IsBuzz(number))
         {
             return "FizzBuzz";
         }
-        if (number % 5 == 0)
+        if (IsBuzz(number))
         {
             return "Buzz";
         }
-        if (number % 3 == 0)
+        if (IsFizz(number))
         {
             return "Fizz";
         }
         return number.ToString();
     }
+
+    private bool IsFizz(int number) => number % 3 == 0;
+    private bool IsBuzz(int number) => number % 5 == 0;
+
 }
